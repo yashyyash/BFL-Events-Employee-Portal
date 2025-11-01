@@ -78,3 +78,147 @@
    color: var(--brand-color) !important;
    border-color: #ffffff;
 }
+
+
+/*
+ * =========================================
+ * Custom Employee Registration Form Styles
+ * =========================================
+ */
+
+/* 1. Define Brand Colors (if not already in styles.css) */
+:root {
+  --brand-color: #8B0040;
+  --brand-color-dark: #6a0030;
+}
+
+/* 2. Page Background */
+/* This makes the white form "pop" */
+body {
+  background-color: #f8f9fa; /* A standard light gray */
+}
+
+/* 3. Form Container */
+.container {
+  /* Set a max-width to keep the form readable on large screens */
+  max-width: 800px;
+  /* Add space above and below the form */
+  margin: 2rem auto;
+}
+
+/* 4. Form as a "Card" */
+/* We'll style the fieldset to act as the card container */
+form fieldset {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  /* A soft, modern shadow */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  /* Hide the default ugly fieldset border */
+  border: none;
+}
+
+/* 5. Form Title */
+h1 {
+  text-align: center;
+  color: var(--brand-color-dark);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* 6. Labels and Inputs */
+.form-label {
+  font-weight: 600;
+  color: #343a40; /* Darker text for labels */
+}
+
+.form-control {
+  padding: 0.75rem 1rem; /* A bit taller */
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  /* Use brand color for the focus ring */
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 0.25rem rgba(139, 0, 64, 0.25);
+}
+
+/* 7. Validation Error Messages */
+.alert-danger {
+  /* Softer, brand-themed error box */
+  background-color: #fdf2f7; /* Light brand pink */
+  color: #c92a2a;
+  border: 1px solid #f8d0e0;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+}
+
+/* 8. Submit Button */
+/* Overriding Bootstrap's .btn-dark */
+.btn-dark {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  /* Make the button full-width for a clear call to action */
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.btn-dark:hover {
+  background-color: var(--brand-color-dark);
+  border-color: var(--brand-color-dark);
+}
+
+/* A clearer disabled state */
+.btn-dark:disabled {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+  color: #6c757d;
+}
+
+/*
+ * =========================================
+ * Media Queries (Responsiveness)
+ * =========================================
+ */
+
+@media (max-width: 767px) {
+  /* On mobile phones... */
+
+  .container {
+    /* Reduce top/bottom margin */
+    margin: 1rem auto;
+  }
+  
+  form fieldset {
+    /* Reduce padding to give more space */
+    padding: 1.5rem;
+  }
+
+  h1 {
+    /* Slightly smaller title on mobile */
+    font-size: 1.75rem;
+  }
+}
+
+/*
+ * =========================================
+ * Clean Light Footer
+ * =========================================
+ */
+.app-footer {
+  text-align: center;
+  padding: 2.5rem 1rem; /* Generous padding */
+  margin-top: 4rem; /* Space between content and footer */
+  
+  /* Replaces the <hr> with a clean top border */
+  border-top: 1px solid #e9ecef; 
+  
+  color: #6c757d; /* Softer text color */
+  font-size: 0.9rem;
+  background-color: #f8f9fa; /* Matches light page background */
+}
